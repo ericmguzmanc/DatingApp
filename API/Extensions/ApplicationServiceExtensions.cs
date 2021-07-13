@@ -9,7 +9,7 @@ namespace API.Extensions
 {
     public static class ApplicationServiceExtensions
     {
-        public static IServiceCollection    AddApplicationServices(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
             // ℹ️ AddScoped is perfect because it only lives while request lifetime
             services.AddScoped<ITokenService, TokenService>();

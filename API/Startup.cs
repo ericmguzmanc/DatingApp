@@ -58,6 +58,7 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            
             // ℹ️ it is important to add cors before authorization and endpoints configurations
             app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
