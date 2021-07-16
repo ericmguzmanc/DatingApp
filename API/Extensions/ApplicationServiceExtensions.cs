@@ -1,4 +1,5 @@
 using API.Data;
+using API.Helpers;
 using API.Interfaces;
 using API.Services;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,8 @@ namespace API.Extensions
         {
             // ℹ️ AddScoped is perfect because it only lives while request lifetime
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             // ℹ️ Order does not matter here
             services.AddDbContext<DataContext>(options =>
             {
