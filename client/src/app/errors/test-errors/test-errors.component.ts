@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./test-errors.component.css']
 })
 export class TestErrorsComponent implements OnInit {
-  baseUrl = environment.netcoreServerUrl;
+  baseUrl = environment.apiUrl;
   validationErrors: string[] = [];
 
   constructor(private http: HttpClient) { }

@@ -1,0 +1,29 @@
+.img-thumbnail {
+  /* margin: 25px;
+  width: 85%;
+  height: 85%; */
+  padding: 0px;
+  border: none !important;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 1.078em;
+  border-top-right-radius: 1.078em;
+  border-color: gray !important;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 1.078em;
+}
+
+.card-body {
+  padding: 10px 25px;
+}
+
+.card-footer {
+  padding: 10px 15px;
+  background-color: #fff;
+  border-top: none;
+}
+
+

@@ -9,7 +9,7 @@ import { ReplaySubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AccountService {
-  baseUrl = environment.netcoreServerUrl;
+  baseUrl = environment.apiUrl;
   // ℹ️ Any time is subscribed, it's going to emmit the last value or any quantity we want
   private currentUserSource = new ReplaySubject<User>(1); 
   // ℹ️ $ sign at the end used for observable conventions

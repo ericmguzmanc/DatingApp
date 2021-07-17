@@ -1,0 +1,11 @@
+.custom-heart-icon {
+  color: #d9534f;
+}
+
+.custom-envelope-icon {
+  color: #02b875;
+}
+
+.card .btn.btn-light:hover {
+  background-color: #f3f3f3 !important;
+}
