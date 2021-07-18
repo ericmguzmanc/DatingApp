@@ -20,7 +20,8 @@ namespace API.Entities
         public string Interests { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-
+        
+        // This is a test change
         /* ⊱ One to many relationship
             One user can have multiple photos
             To fully define the cascading deletion of this entity we have to go to the 
