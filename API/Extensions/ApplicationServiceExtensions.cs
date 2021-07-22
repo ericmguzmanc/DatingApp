@@ -17,6 +17,7 @@ namespace API.Extensions
             // ℹ️ AddScoped is perfect because it only lives while request lifetime
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IPhotoService, PhotoService>();
+            services.AddScoped<LogUserActivity>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             // ℹ️ Order does not matter here

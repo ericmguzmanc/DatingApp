@@ -24,7 +24,8 @@ namespace API.Services
             // List of claims (name/value pair to allow consent ) we are going to use
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.NameId, user.UserName)
+                new Claim(JwtRegisteredClaimNames.NameId, user.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName)
             };
 
             // Credentials signing

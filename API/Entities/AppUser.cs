@@ -28,10 +28,5 @@ namespace API.Entities
             Photo entity declaration and add the relation details */
         public ICollection<Photo> Photos { get; set; }
 
-        // ℹ️ Extension method to calculate age
-        // public int GetAge()
-        // {
-        //     return DateOfBirth.CalculateAge();
-        // }
     }
 }
