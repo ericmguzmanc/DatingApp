@@ -22,7 +22,7 @@ export class ErrorInterceptor implements HttpInterceptor {
           switch (error.status) {
             case 400:
               if (error.error.errors) {
-                // ℹ️ known on .net - modalStateErros are validation erros 
+                // ℹ️ known on .net - modalStateErros are validation erros
                 let modalStateErros = [];
                 for (const key in error.error.errors) {
                   if (error.error.errors[key]) {
@@ -32,8 +32,10 @@ export class ErrorInterceptor implements HttpInterceptor {
                 // ℹ️ This is going to be usefull when returning validation errors
                 // Lets say in a form like the register
                 throw modalStateErros.flat();
-              } else {
+              } else if (typeof(error.error) == 'object') {
                 this.toastr.error(error.statusText, error.status);
+              } else {
+                this.toastr.error(error.error, error.status);
               }
               break;
               case 401:
