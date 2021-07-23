@@ -1,0 +1,14 @@
+.img-circle {
+  width: 20%;
+  border-radius: 1.078em;
+}
+
+.custom-btn {
+  border-color: #d9534f !important;
+  background-color: #d9534f !important;
+}
+
+.custom-btn:hover {
+  border-color: #ae423f !important;
+  background-color: #b84743 !important;
+}
