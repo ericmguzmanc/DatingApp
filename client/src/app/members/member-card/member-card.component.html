@@ -23,7 +23,7 @@
     <span class="is-online" *ngIf="(presence.onlineUsers$ | async)?.includes(member.username)">&#9679;</span>
     <span *ngIf="!(presence.onlineUsers$ | async)?.includes(member.username)">&#9675;</span>
     <h5 class="card-title text-center mb-0 ml-1 d-inline-block">
-      {{member.knownAs}}, {{member.age}}
+      {{member.knownAs}}, {{member.age}}!
     </h5>
     <p class="card-text text-center text-muted small-text">{{member.city}}</p>
 
