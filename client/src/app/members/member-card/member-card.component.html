@@ -1,4 +1,4 @@
-<div class="card mb-4">
+ <div class="card mb-4">
   <div class="card-img-wrapper">
     <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" class="card-img-top">
     <ul class="list-inline member-icons animate text-center">
@@ -19,10 +19,14 @@
       </li>
     </ul>
   </div>
-  <div class="card-body p-1">
-    <h5 class="card-title text-center mb-0">
+  <div class="card-body p-1 text-center">
+    <span class="is-online" *ngIf="(presence.onlineUsers$ | async)?.includes(member.username)">&#9679;</span>
+    <span *ngIf="!(presence.onlineUsers$ | async)?.includes(member.username)">&#9675;</span>
+    <h5 class="card-title text-center mb-0 ml-1 d-inline-block">
       {{member.knownAs}}, {{member.age}}
     </h5>
     <p class="card-text text-center text-muted small-text">{{member.city}}</p>
+
+    {{(presence.onlineUsers$ | async)?.includes(member.username)}}
   </div>
 </div>
